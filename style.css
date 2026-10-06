@@ -1,0 +1,131 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+    url(images/misc/analytic.jpg);
+  background-size: cover;
+  /* se fie au centre de l image pour se definir */
+  background-position: center;
+  /* evite l effet mozaique  */
+  background-repeat: no-repeat;
+  /* reste posée au scroll */
+  background-attachment: fixed;
+}
+main {
+  padding: 30px;
+}
+
+h1 {
+  font-size: 50px;
+
+  text-align: center;
+}
+h2 {
+  font-size: 30px;
+  border-bottom: 2px dotted var(--school-bus-yellow);
+  width: fit-content;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--onyx);
+}
+
+header {
+  flex-direction: column;
+}
+.cards {
+    display: flex;
+    gap: 20px;
+    
+}
+.cards article{
+    flex: 1;
+     background-color:var(--air-force-blue-transparent);
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+  
+}
+.logo {
+  height: 60px;
+ 
+}
+.formulaire {
+  max-width: 600px;
+  margin: auto;
+  
+
+}
+
+.formulaire div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--onyx);
+}
+
+.formulaire form{
+
+      display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.formulaire textarea {
+  height: 150px;
+}
+  
+  
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 5px;
+  padding: 0;
+}
+nav a {
+  text-decoration: none;
+  color: var(--onyx);
+}
+nav a:hover {
+  color: white;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--sky-blue);
+}
+
+.btn {
+  width: 198px;
+  height: 57px;
+  background: var(--school-bus-yellow);
+  border-radius: 20px;
+  display: block;
+  margin: auto;
+  border: 0px;
+  text-transform: uppercase;
+  padding: 20px;
+}
+footer{
+   text-align: center;
+background-color: var(--sky-blue);
+   padding: 20px;}
+
+
+   @media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+  }
+}
