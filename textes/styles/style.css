@@ -4,7 +4,7 @@ body {
   min-height: 100vh;
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
-    url(images/misc/analytic.jpg);
+    url(../images/misc/analytic.jpg);
   background-size: cover;
   /* se fie au centre de l image pour se definir */
   background-position: center;

@@ -1,31 +1,4 @@
-<?php 
-$confirmation = ""; // message à afficher plus bas
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // trim() enlève les espaces inutiles au début et à la fin
-    $name = trim($_POST["nom"]);
-    $email = trim($_POST["mail"]);
-    $message = trim($_POST["message"]);
-
-    // on vérifie que c'est une vraie adresse email
-    if (filter_var($email, FILTER_VALIDATE_EMAIL) && $name !== "" && $message !== "") {
-
-        $to = "ewolter@student.efp.be";                 // l'adresse qui reçoit les messages
-        $subject = "New message from the website";
-        $body = "Name: $name\nEmail: $email\n\n$message";
-        $headers = "Reply-To: $email";
-
-        if (mail($to, $subject, $body, $headers)) {
-            $confirmation = "Your message has been sent";   // message de réussite, en anglais
-        } else {
-            $confirmation = "Sorry, an error occurred. Please try again.";
-        }
-
-    } else {
-        $confirmation = "Please fill in all fields with a valid email.";
-    }
-}
-?>
+<?php require 'config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,8 +6,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="var.css" />
-   <link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="styles/var.css" />
+<link rel="stylesheet" href="styles/style.css" />
    <script src="script.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web2Risk Agency</title>
@@ -99,20 +72,23 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <div class="cards">
 <article>
     <img class="img" src="images/equipe/lucas.jpg" alt="">
-<h3>Lucas, Front-End Developer, specialist in seamless interfaces.</h3>
+<h3>Lucas</h3>
+<p>, Front-End Developer, specialist in seamless interfaces.</p>
 <p>A technology enthusiast, Lucas is an expert in JavaScript and modern frameworks such as React and Vue.js. Always on the lookout for the latest trends, he ensures a smooth and responsive interface, with a focus on accessibility and user experience. A great fan of minimalist design, he enjoys creating interfaces that are both aesthetically pleasing and functional.
 </p>
 
 </article>
 <article>
     <img class="img" src="images/equipe/emma.jpg" alt="">
-    <h3>Emma, Digital project manager, ensuring the success of your projects.</h3>
+    <h3>Emma</h3>
+    <p>Digital project manager, ensuring the success of your projects.</p>
     <p>
 With several years of experience in web project management, Emma serves as the link between the technical team and the clients. Organised and meticulous, she ensures that each stage of the project adheres to the budget and timelines, while also meeting the clients' needs. Possessing a keen ability to listen, she makes certain that every project aligns with the vision of the end user.</p>
 </article>
 <article>
     <img class="img" src="images/equipe/sophia.jpg" alt="">
-    <h3>Sofia, SEO expert, your ally in maximising your visibility.</h3>
+    <h3>Sofia</3>
+    <p>SEO expert, your ally in maximising your visibility.</h3></p>
     <p>
 With a solid expertise in natural referencing, Sofia is adept at using data analysis tools to maximise the visibility of projects. She conducts thorough SEO audits and identifies the best strategies to ensure each site achieves optimal positioning. Passionate about numbers and user behaviour, she constantly adjusts her recommendations to enhance performance.
 </p>
